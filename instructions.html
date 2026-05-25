@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Connect? - Keymo</title>
+    <title>Instructions - Keymo</title>
 
     <style>
         body {
@@ -133,9 +133,39 @@
             margin: 0;
         }
 
+        /* Coming soon wrapper */
+        .coming-soon-wrapper {
+            position: relative;
+            width: 320px;
+            height: 95px;
+            flex-shrink: 0;
+        }
+
+        .coming-soon-wrapper .store-button {
+            width: 100%;
+            height: 100%;
+            filter: blur(2px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .coming-soon-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+            border-radius: 16px;
+        }
+
         @media (max-width: 700px) {
             .container { padding: 28px; }
             .store-button { width: 100%; }
+            .coming-soon-wrapper { width: 100%; }
             h1 { font-size: 34px; }
             .store-text-big { font-size: 28px; }
         }
@@ -145,12 +175,12 @@
 <body>
 <div class="container">
 
-    <h1>How to Connect?</h1>
+    <h1>Instructions</h1>
     <p>Follow these steps to connect Keymo.</p>
 
     <h2>1. Install Keymo</h2>
     <div class="buttons">
-        <a class="store-button" href="#">
+        <a class="store-button" href="https://play.google.com/store/apps/details?id=com.metashium.keymo">
             <svg class="store-icon-svg" viewBox="0 0 512 512" fill="white">
                 <path d="M48 59.49v393a4.33 4.33 0 007.37 3.07L274 256 55.37 56.42A4.33 4.33 0 0048 59.49z"/>
                 <path d="M345.8 174L89.22 32.64l-.16-.09c-4.42-2.4-8.62 3.58-5 7.06L285 231.65z"/>
@@ -163,7 +193,7 @@
             </div>
         </a>
 
-        <a class="store-button" href="#">
+        <a class="store-button" href="https://github.com/Metashium/Keymo/releases/download/v1.0.0/Keymo.apk">
             <svg class="store-icon-svg" viewBox="0 0 24 24" fill="white">
                 <path d="M12 .5C5.7.5.6 5.6.6 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2.1 2.6 1.5.1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.4 5.6 18.3.5 12 .5z"/>
             </svg>
@@ -176,17 +206,20 @@
 
     <h2>2. Install Keymo Server</h2>
     <div class="buttons">
-        <a class="store-button" href="#">
-            <svg class="store-icon-svg" viewBox="0 0 24 24" fill="white">
-                <path d="M3 3.5l8-1.1v9.1H3V3.5zm9.5-1.3L21 1v10.5h-8.5V2.2zM3 12.8h8v8.8l-8-1.1v-7.7zm9.5 0H21V23l-8.5-1.2v-9z"/>
-            </svg>
-            <div>
-                <div class="store-text-small">GET IT FROM</div>
-                <div class="store-text-big">Microsoft</div>
-            </div>
-        </a>
+        <div class="coming-soon-wrapper">
+            <a class="store-button" href="#">
+                <svg class="store-icon-svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M3 3.5l8-1.1v9.1H3V3.5zm9.5-1.3L21 1v10.5h-8.5V2.2zM3 12.8h8v8.8l-8-1.1v-7.7zm9.5 0H21V23l-8.5-1.2v-9z"/>
+                </svg>
+                <div>
+                    <div class="store-text-small">GET IT FROM</div>
+                    <div class="store-text-big">Microsoft</div>
+                </div>
+            </a>
+            <div class="coming-soon-overlay">Coming Soon</div>
+        </div>
 
-        <a class="store-button" href="#">
+        <a class="store-button" href="https://github.com/Metashium/Keymo/releases/download/v1.0.0/KeymoServerSetup.exe">
             <svg class="store-icon-svg" viewBox="0 0 24 24" fill="white">
                 <path d="M12 .5C5.7.5.6 5.6.6 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2.1 2.6 1.5.1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.4 5.6 18.3.5 12 .5z"/>
             </svg>
@@ -210,7 +243,7 @@
 
         <div class="trouble-item">
             <h3>Your device doesn't appear after scanning</h3>
-            <p>Try typing the IP address manually. You can use the IP adress in Keymo Server.</p>
+            <p>Make sure Keymo Server is online. Then try typing the IP address manually. You can use the IP adress in Keymo Server.</p>
         </div>
 
         <div class="trouble-item">
@@ -221,11 +254,6 @@
         <div class="trouble-item">
             <h3>It disconnects frequently</h3>
             <p>Your phone may be switching to mobile data. Make sure Wi-Fi is stable and that your phone isn't set to save battery by turning off Wi-Fi in the background.</p>
-        </div>
-
-        <div class="trouble-item">
-            <h3>Keymo can't find the server at all</h3>
-            <p>Make sure Keymo Server is open and online before scanning. It needs to be running for your phone to detect it.</p>
         </div>
 
     </div>
